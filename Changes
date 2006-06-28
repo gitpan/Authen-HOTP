@@ -1,0 +1,6 @@
+Revision history for Perl extension Authen::HOTP.
+
+0.01  Thu Jun 29 04:42:22 2006
+	- original version; created by h2xs 1.23 with options
+		-AcXn Authen::HOTP
+
