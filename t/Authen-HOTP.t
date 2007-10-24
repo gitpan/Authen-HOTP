@@ -1,4 +1,4 @@
-use Test::More tests => 11;
+use Test::More tests => 12;
 BEGIN { use_ok('Authen::HOTP', qw(:all)) };
 
 # test vectors from Appendix D of RFC 4226
@@ -20,3 +20,5 @@ for (my $c = 0; $c < @expected; $c++)
 {
     ok(hotp($secret, $c) eq $expected[$c]);
 }
+
+ok(hotp("12345678901234567890", 30, 6) eq "026920");

@@ -16,7 +16,7 @@ our @EXPORT_OK = ( @{ $EXPORT_TAGS{'all'} } );
 
 our @EXPORT = qw( );
 
-our $VERSION = '0.01';
+our $VERSION = '0.02';
 
 sub hotp
 {
@@ -43,7 +43,7 @@ sub hotp
     $dt &= 0x7fffffff; # 31-bit
     $dt %= (10 ** $digits); # limit range
 
-    $dt;
+    sprintf "%0${digits}d", $dt;
 }
 
 1;
